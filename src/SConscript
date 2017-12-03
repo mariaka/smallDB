@@ -1,0 +1,6 @@
+Import('env')
+env.Program(target = 'buffertest', source = Glob('buffer/*.cpp') + Glob('hash/*.cpp') + Glob('file/*.cpp') + ['test/buffertest/buffertest.cpp'])
+env.Program(target = 'schematest', source = Glob('schema/*.cpp') + ['test/schematest/schematest.cpp'])
+env.Program(target = 'slottedtest', source = Glob('buffer/*.cpp') + Glob('hash/*.cpp') + Glob('file/*.cpp') + Glob('segment/*.cpp') + Glob('data/*.cpp') + ['test/slottedtest/slottedtest.cpp'])
+env.Program(target = 'bplustreetest', source = Glob('buffer/*.cpp') + Glob('hash/*.cpp') + Glob('file/*.cpp') + Glob('segment/*.cpp') + Glob('bplustree/*.cpp') + ['test/bplustreetest/bplustreetest.cpp'])
+env.Program(target = 'operatorstest', source = Glob('buffer/*.cpp') + Glob('hash/*.cpp') + Glob('file/*.cpp') + Glob('segment/*.cpp') + Glob('data/*.cpp') + Glob('schema/*.cpp') + Glob('operators/*.cpp') + ['test/operatorstest/operatorstest.cpp'])
